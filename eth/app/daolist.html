@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LendIn</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+        body {
+            margin-top: 60px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+        }
+
+        h4 {
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        .col-form-label {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        legend {
+            font-size: 2.3em;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        label {
+            padding-top: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-dark navbar-fixed-top bg-primary">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2"
+            aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+    </button>
+    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+        <a class="navbar-brand">LendIn</a>
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Search Orders <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Track Order</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav pull-sm-right">
+            <li class="nav-item pull-right">
+                <a class="nav-link">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<p id='addrd' class="text-muted pull-right">
+</p>
+<!--Content Starts here -->
+
+<legend> Search Investment Opportunites</legend>
+<br/>
+
+<div class="card card-block">
+
+    <h2 class="card-title">Filters </h2>
+
+    <div class="card-text" id="filter-form" style="">
+        <form method="get">
+            <div class="form-group">
+                <label class="control-label sr-only " for="id_supplier">Supplier</label>
+
+                <div class=" ">
+                    <select class=" form-control" id="id_supplier" name="supplier">
+                        <option value="" selected="selected">--- Exporter ---</option>
+                        <option value="13">Anitha Art Printers</option>
+                        <option value="3">Bhagat</option>
+                        <option value="14">Cash</option>
+                        <option value="4">Chavda Brothers</option>
+                        <option value="10">Chic Cold Storage</option>
+                        <option value="5">Irfan Sea Food</option>
+                        <option value="15">K. S. Traders</option>
+                        <option value="1">Meena Traders</option>
+                        <option value="12">Nicholas Farm Fresh</option>
+                        <option value="6">Opening Stock</option>
+                        <option value="9">P. D. Enterprises</option>
+                        <option value="7">Sagar Traders</option>
+                        <option value="11">Shako Flexipack (P) Ltd</option>
+                        <option value="2">Shamsullah</option>
+                        <option value="8">Shamsullah Khan Dryfish Shop</option>
+                        <option value="16">Trend PlastPouchPack Pvt. Ltd.</option>
+                    </select>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+
+                <label class="control-label sr-only " for="id_outstanding">Outstanding</label>
+
+
+                <div class=" ">
+                    <select class=" form-control" id="id_outstanding" name="outstanding">
+                        <option value="" selected="selected">---Has Outstanding? ---</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+
+                <label class="control-label sr-only " for="id_inward_batch_number">Minimum Credit Score</label>
+
+
+                <div class=" ">
+                    <input class=" form-control" id="id_inward_batch_number" name="inward_batch_number"
+                           placeholder="Minimum Credit Score" type="text">
+
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+
+                <label class="control-label sr-only " for="id_start_date">Deadline</label>
+
+
+                <div class=" ">
+                    <input class="form-control hasDatepicker" id="id_start_date" name="start_date"
+                           placeholder="Minimum Interest Rate" type="text">
+
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+
+                <label class="control-label sr-only " for="id_end_date">End date</label>
+
+
+                <div class="form-group">
+                    <input class="form-control hasDatepicker" id="id_end_date" name="end_date"
+                           placeholder="Deadline Days" type="text">
+
+                </div>
+
+            </div>
+            <button class="btn btn-primary btn-block" type="submit" name="apply" value="True">Apply Filters</button>
+
+        </form>
+
+    </div>
+
+
+</div>
+<br/>
+<table class="table">
+    <thead class="thead-inverse">
+    <tr>
+        <th>#</th>
+        <th>Invoice Amount</th>
+        <th>Interest Rate</th>
+        <th>Credit Score</th>
+        <th>Outstanding</th>
+        <th>Deadline</th>
+        <th>Transaction View</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>50000</td>
+        <td>17</td>
+        <td>42</td>
+        <td>40000</td>
+        <td>Jan 31st 2017</td>
+        <td><a href="/dao.html#3">Go to transaction</a></td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>3000</td>
+        <td>10</td>
+        <td>12</td>
+        <td>1000</td>
+        <td>Dec 30th 2016</td>
+        <td><a href="/dao.html#4">Go to transaction</a></td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>750000</td>
+        <td>15</td>
+        <td>62</td>
+        <td>180000</td>
+        <td>Sept 15th 2016</td>
+        <td><a href="/dao.html#5">Go to transaction</a></td>
+    </tr>
+    </tbody>
+</table>
+<!-- Content ends HEre -->
+<!-- // <script src="js/jquery-1.11.3.min.js"></script> -->
+<script src="app.js"></script>
+</body>
+</html>

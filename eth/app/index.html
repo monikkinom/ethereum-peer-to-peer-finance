@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>LendIn</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style type="text/css">
+            body {
+                margin-top: 60px;
+                padding-left: 50px;
+                padding-right: 50px;
+
+            }
+            h4{
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+            .col-form-label {
+                text-align: right;
+                font-weight: bold;
+            }
+            legend {
+                font-size: 2.3em;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            label {
+                padding-top: 5px;
+                font-size: 1.3em;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark navbar-fixed-top bg-primary">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+          </button>
+          <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+            <a class="navbar-brand">LendIn</a>
+            <ul class="nav navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">New Transaction <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Manage Transactions</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav pull-sm-right">
+              <li class="nav-item pull-right">
+                <a class="nav-link">Logged In As Exporter</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <p class="text-muted pull-sm-right" id="addr"></p>
+        <!--Content Starts here -->
+        
+          <div >
+            <legend>Add a transaction</legend>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Invoice</label>
+              <div class="col-xs-9">
+                <input class="form-control form-control-lg" type="file" id="example-text-input">
+                <input type="hidden" value="QmetqbxFu4UNR3LoGqLPqdw7AGB77rRi28sQAgYsjaKfcU" id="in">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="iid" class="col-xs-3 col-form-label">Importer Public Address</label>
+              <div class="col-xs-9">
+                <input class="form-control form-control-lg" type="search" placeholder="eg 0xrandomhashhere12334" id="iid">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input-2" class="col-xs-3 col-form-label">Export Order</label>
+              <div class="col-xs-9">
+                <input class="form-control form-control-lg" type="file" id="example-text-input-2">
+                <input type="hidden" value="QmR8ozw7dr9NFqEYBAskxpNTxYYHQcnQ7f7tCsuRmuFfQN" id="eo">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-search-input" class="col-xs-3 col-form-label">Invoice Amount</label>
+              <div class="col-xs-9">
+                <input class="form-control form-control-lg" type="search" id="ia">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-search-input" class="col-xs-3 col-form-label">Request Loan Amount</label>
+              <div class="col-xs-9">
+                <input class="form-control form-control-lg" type="search" id="rl">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-search-input" class="col-xs-3 col-form-label">Interest Rate</label>
+              <div class="col-xs-9">
+                <input class="form-control form-control-lg" type="search" id="ir">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input-3" class="col-xs-3 col-form-label">Insurance</label>
+              <div class="col-xs-9">
+                <input class="form-control form-control-lg" type="file" id="example-text-input-3">
+                <input type="hidden" value="QmR8ozw7dr9NFqEYBAskxpNTxYYHQcnQ7f7tCsuRmuFfQN" id="ins">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-email-input" class="col-xs-3 col-form-label">Your Credit Rating</label>
+              <div class="col-xs-9">
+                <p class="form-control-lg form-control-static" id="cr">42</p>
+
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-email-input" class="col-xs-3 col-form-label"></label>
+                <button type="submit" class="btn btn-primary" id="sub">Submit</button>
+            </div>
+          </div>
+        <!-- Content ends HEre -->
+        <!-- // <script src="js/jquery-1.11.3.min.js"></script> -->
+        <!-- // <script src="js/bootstrap.min.js"></script> -->
+        <script src="app.js"></script>
+        <!-- // <script src="exporter.js"></script> -->
+    </body>
+</html>
